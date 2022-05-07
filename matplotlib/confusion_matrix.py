@@ -1,5 +1,4 @@
 # 混淆矩阵
-from tkinter import font
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -39,21 +38,20 @@ def plot_confusion_matrix(matrix, label_info=None,
         plt.show()
 
 
-matrix = np.array([
-    [40, 0, 0, 0, 1],
-    [2, 13, 3, 1, 0],
-    [5, 5, 4, 0, 2],
-    [5, 1, 0, 4, 2],
-    [1, 1, 0, 1, 6]
-])
-
-
-plot_confusion_matrix(matrix,
-                      label_info={
-                          '神经源性瘤': 0,
-                          '骨髓瘤': 1,
-                          '骨巨细胞瘤': 2,
-                          '脊索瘤': 3,
-                          'langerhans': 4
-                      }
-                      )
+if __name__ == '__main__':
+    matrix = np.array([
+        [40, 0, 0, 0, 1],
+        [2, 13, 3, 1, 0],
+        [5, 5, 4, 0, 2],
+        [5, 1, 0, 4, 2],
+        [1, 1, 0, 1, 6]
+    ])
+    plot_confusion_matrix(matrix,
+                          label_info={
+                              '神经源性瘤': 0,
+                              '骨髓瘤': 1,
+                              '骨巨细胞瘤': 2,
+                              '脊索瘤': 3,
+                              'langerhans': 4
+                          }
+                          )
